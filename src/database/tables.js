@@ -1,5 +1,7 @@
+import { DATABASE_NAMES } from "../constants/database";
+
 var players = {
-    name: 'Players',
+    name: DATABASE_NAMES.PLAYERS,
     columns: {
         // Here "Id" is name of column 
         id:{ primaryKey: true, autoIncrement: true },
@@ -8,7 +10,7 @@ var players = {
 };
 
 const shots = {
-    name: 'Shots',
+    name: DATABASE_NAMES.SHOTS,
     columns: {
         id: { primaryKey: true, autoIncrement: true },
         gameId: {dataType: 'number'},
@@ -21,14 +23,14 @@ const shots = {
 }
 
 const ends = {
-    name: 'Ends',
+    name: DATABASE_NAMES.ENDS,
     columns: {
         id: { primaryKey: true, autoIncrement: true },
         gameId: {dataType: 'number'},
     }
 };
 const games = {
-    name: 'Games',
+    name: DATABASE_NAMES.GAMES,
     columns: {
         id: { primaryKey: true, autoIncrement: true },
     }
