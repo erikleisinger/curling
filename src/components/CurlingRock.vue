@@ -32,16 +32,14 @@ export default {
             const {position} = this;
         interact(`#rock-${this.index}`).draggable({
             listeners: {
-                start (event) {
-                    console.log('START: ', event.type, event.target)
-                },
                 move(event) {
-                    console.log('MOVE: ', event)
                     position.x += event.dx
       position.y += event.dy
 
       event.target.style.transform =
         `translate(${position.x}px, ${position.y}px)`
+
+        this.$emit('')
                 }
             }
         })

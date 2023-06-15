@@ -1,16 +1,9 @@
 <script setup>
-import Rings from './components/CurlingRings.vue'
-import AddPlayer from './components/AddPlayer.vue'
-import DatabaseView from './components/DatabaseView.vue'
+import GameController from './components/GameController.vue'
 </script>
 
 <template>
-<div style="display:flex; width: 100vw; height: 100vh">
- <Rings/>
-<add-player/>
-<database-view dbName="Players" eventName="playerAdded"/>
-
- </div>
+<game-controller/>
 
 </template>
 <style >
@@ -19,3 +12,5 @@ import DatabaseView from './components/DatabaseView.vue'
   margin: unset;
 }
 </style>
+
+
